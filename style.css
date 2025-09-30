@@ -1,0 +1,131 @@
+/* =========================
+   Modo oscuro
+========================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode footer,
+body.dark-mode #carritoFlotante {
+  background-color: #121212 !important;
+  color: #ffffff;
+}
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+body.dark-mode .navbar,
+body.dark-mode .modal-content {
+  background-color: #1e1e1e !important;
+  color: #ffffff;
+}
+body.dark-mode .btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+body.dark-mode .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================
+   Transiciones generales
+========================= */
+section, header, footer, #carritoFlotante, .card {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* =========================
+   Tarjetas de productos
+========================= */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s, transform 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   Carrito flotante
+========================= */
+#carritoFlotante {
+  transition: transform 0.3s, background-color 0.5s;
+  background: white;
+  z-index: 9999;
+}
+
+/* =========================
+   Lista de productos en admin
+========================= */
+#listaProductos img {
+  height: 40px;
+  width: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* =========================
+   Video preview admin
+========================= */
+#videoPreview iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   Cantidad en carrito
+========================= */
+.cantidadInput {
+  width: 50px;
+  text-align: center;
+}
+
+/* =========================
+   Animaciones fade-in para scroll
+========================= */
+[data-fade] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+[data-fade].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Sección Quienes Somos
+========================= */
+#quienesSomos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0;
+}
+#quienesSomos img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Ovalada */
+  border: 3px solid #007bff;
+  margin-bottom: 15px;
+}
+#quienesSomos p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 5px;
+}
+#quienesSomos .telefono {
+  font-weight: bold;
+  color: #007bff;
+}
